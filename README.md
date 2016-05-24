@@ -32,22 +32,15 @@ Thymeleaf is a new template engine. http://www.thymeleaf.org/index.html
          </property>
      </bean>
      
+   
+### Docker编译
 
-![Alt text](http://g.gravizo.com/g?
-  digraph G {
-    aize ="4,4";
-    main [shape=box];
-    main -> parse [weight=8];
-    parse -> execute;
-    main -> init [style=dotted];
-    main -> cleanup;
-    execute -> { make_string; printf}
-    init -> make_string;
-    edge [color=red];
-    main -> printf [style=bold,label="100 times"];
-    make_string [label="make a string"];
-    node [shape=box,style=filled,color=".7 .3 1.0"];
-    execute -> compare;
-  }
-)
+* 命令行:
 
+     $ docker run -it --rm --name thymeleaf-demo-project -v "$(pwd)":/usr/src/app -v "$HOME/.m2":/root/.m2 -w /usr/src/app maven:3.3.3-jdk-8 mvn clean compile
+
+* docker-compose
+
+     $ docker-compose  --abort-on-container-exit
+
+    
