@@ -28,7 +28,7 @@ public class CmsDialect extends AbstractDialect {
             @Override
             protected String getText(Arguments arguments, Element element, String attributeName) {
                 String attributeValue = element.getAttributeValue(attributeName);
-                return attributeValue + "1";
+                return "Load from cms fragment: <h3>"+attributeValue + "</h3>";
             }
 
             @Override
