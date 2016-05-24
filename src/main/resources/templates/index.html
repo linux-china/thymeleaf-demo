@@ -1,11 +1,20 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" lang="en-US">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:cms="http://www.w3.org/1999/xhtml"
+      layout:decorator="layout" lang="en-US">
 <head>
     <meta charset="UTF-8"/>
-    <title>Demo</title>
+    <title>Welcome</title>
+    <script>
+        var title = 'abc'
+    </script>
 </head>
 <body>
-<h3 th:text="${nick}"> Hello jacky</h3>
+<div layout:fragment="content">
+    <h3 th:text="${nick}"> Hello jacky</h3>
+    <span cms:fragment="/demo">Demo</span>
+</div>
+<br/>
 </body>
 </html>
