@@ -10,6 +10,8 @@ services:
       environment:
           SPRING_APPLICATION_JSON: '{"spring.redis.host":"redis.host"}'
       command:  mvn -B clean test
+      depends_on:
+        - redis
       links:
           - redis:redis.host
   redis:
