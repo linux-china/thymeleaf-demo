@@ -41,6 +41,6 @@ Thymeleaf is a new template engine. http://www.thymeleaf.org/index.html
 
 * docker-compose
 
-     $ docker-compose  --abort-on-container-exit
+     $ docker-compose up --abort-on-container-exit && docker-compose rm --force --all
 
     
