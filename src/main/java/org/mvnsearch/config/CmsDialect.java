@@ -1,12 +1,16 @@
 package org.mvnsearch.config;
 
-import org.thymeleaf.Arguments;
-import org.thymeleaf.dialect.AbstractDialect;
-import org.thymeleaf.dom.Element;
+import org.thymeleaf.context.ITemplateContext;
+import org.thymeleaf.dialect.AbstractProcessorDialect;
+import org.thymeleaf.dialect.IProcessorDialect;
+import org.thymeleaf.engine.AttributeName;
+import org.thymeleaf.model.IModel;
 import org.thymeleaf.processor.IProcessor;
-import org.thymeleaf.processor.attr.AbstractUnescapedTextChildModifierAttrProcessor;
+import org.thymeleaf.processor.element.AbstractAttributeModelProcessor;
+import org.thymeleaf.processor.element.IElementModelStructureHandler;
+import org.thymeleaf.templatemode.TemplateMode;
 
-import java.util.HashSet;
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -14,28 +18,20 @@ import java.util.Set;
  *
  * @author linux_china
  */
-public class CmsDialect extends AbstractDialect {
+public class CmsDialect extends AbstractProcessorDialect {
 
-    @Override
-    public String getPrefix() {
-        return "cms";
+    public CmsDialect() {
+        super("CMS", "cms", 1);
     }
 
-    @Override
-    public Set<IProcessor> getProcessors() {
-        final Set<IProcessor> processors = new HashSet<>();
-        processors.add(new AbstractUnescapedTextChildModifierAttrProcessor("fragment") {
+    public Set<IProcessor> getProcessors(String dialectPrefix) {
+        IProcessor processor = new AbstractAttributeModelProcessor(TemplateMode.HTML, dialectPrefix, null, false, "fragment", false, 1, true) {
             @Override
-            protected String getText(Arguments arguments, Element element, String attributeName) {
-                String attributeValue = element.getAttributeValue(attributeName);
-                return "Load from cms fragment: <h3>"+attributeValue + "</h3>";
-            }
+            protected void doProcess(ITemplateContext context, IModel model, AttributeName attributeName, String attributeValue, IElementModelStructureHandler structureHandler) {
 
-            @Override
-            public int getPrecedence() {
-                return 100;
             }
-        });
-        return processors;
+        };
+        return Collections.singleton(processor);
     }
+
 }
