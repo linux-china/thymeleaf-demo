@@ -1,6 +1,7 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" lang="en-US"
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:cms="http://www.ytx.com/cms"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       data-layout-decorate="layout">
 <head>
@@ -12,7 +13,12 @@
 </head>
 <body>
 <div data-layout-fragment="content">
-    goood22223333
+    goood222233334444
+
+    <div id="cms_content" class="cms" cms:fragment="xxxx">cms content</div>
+
+    <span>ddemo</span>
 </div>
+
 </body>
 </html>
