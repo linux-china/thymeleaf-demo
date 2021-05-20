@@ -8,7 +8,6 @@ Thymeleaf is a new template engine. http://www.thymeleaf.org/index.html
 * Template Engine Demo
 * Email Template Demo
 
-
 ### spring integration
 
 样例： https://github.com/thymeleaf/thymeleafexamples-springmail
@@ -43,4 +42,7 @@ Thymeleaf is a new template engine. http://www.thymeleaf.org/index.html
 
      $ docker-compose up --abort-on-container-exit && docker-compose rm --force --all
 
-    
+
+# References
+
+* Taming Thymeleaf: https://leanpub.com/taming-thymeleaf
