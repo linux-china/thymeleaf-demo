@@ -1,7 +1,7 @@
 package org.mvnsearch;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
@@ -14,7 +14,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 public class ThymeLeafTest {
     private static TemplateEngine templateEngine;
 
-    @BeforeClass
+    @BeforeAll
     public static void setUp() throws Exception {
         templateEngine = new TemplateEngine();
         ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
