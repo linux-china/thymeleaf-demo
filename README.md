@@ -48,3 +48,4 @@ Thymeleaf is a new template engine. http://www.thymeleaf.org/index.html
 * Taming Thymeleaf: https://leanpub.com/taming-thymeleaf
 * Using Java 16 records with Thymeleaf: https://www.wimdeblauwe.com/blog/2021/07/25/using-records-with-thymeleaf/
 * Spring Boot and Thymeleaf library for htmx: https://github.com/wimdeblauwe/htmx-spring-boot-thymeleaf
+* Thymeleaf 3.1: What’s new and how to migrate：https://www.thymeleaf.org/doc/articles/thymeleaf31whatsnew.html
