@@ -17,8 +17,8 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <spring-boot.version>3.0.0</spring-boot.version>
-        <thymeleaf.version>3.1.0.RELEASE</thymeleaf.version>
+        <spring-boot.version>3.0.3</spring-boot.version>
+        <thymeleaf.version>3.1.1.RELEASE</thymeleaf.version>
     </properties>
 
     <dependencies>
@@ -126,7 +126,7 @@
                     <plugin>
                         <groupId>pl.project13.maven</groupId>
                         <artifactId>git-commit-id-plugin</artifactId>
-                        <version>4.0.4</version>
+                        <version>5.0.0</version>
                         <executions>
                             <execution>
                                 <goals>
